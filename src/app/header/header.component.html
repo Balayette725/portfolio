@@ -1,0 +1,31 @@
+<body>
+  <a class="logo" href="/">LOUIS FORTRIE</a>
+  <div class="navbar">
+    <a href="/experience" class="nav-link">Expérience Pro.</a>
+    <a href="/veille" class="nav-link">Veille Techno</a>
+    <a href="/projets" class="nav-link">Mes Projets</a>
+  </div>
+  <div class="burger" id="burger">
+    <svg
+      viewBox="0 -53 384 384"
+      width="384pt"
+      xmlns="http://www.w3.org/2000/svg" class="burger-menu" (click)="displayModal()"
+    >
+      <path
+        d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+      />
+      <path
+        d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+      />
+      <path
+        d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+      />
+    </svg>
+  </div>
+  <div class="modal" id="modal">
+    <a href="/experience" class="burger-link">Expérience Pro.</a>
+    <a href="/veille" class="burger-link">Veille Techno</a>
+    <a href="/projets" class="burger-link">Mes Projets</a>
+    <span class="close" (click)="resetModal()">&times;</span>
+  </div>
+</body>

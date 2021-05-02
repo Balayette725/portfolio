@@ -1,0 +1,175 @@
+.cards-container {
+  height: 27em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: var(--secondary-color);
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+hr {
+  margin: auto;
+  height: 0.1rem;
+  width: 80%;
+  border: none;
+  background: var(--secondary-color);
+}
+
+.bg1 {
+  background-color: rgb(172, 173, 173);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.bg1 p {
+  color: var(--primary-color);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.card {
+  width: 20%;
+  height: 22em;
+  background:var(--third-color);
+  border-radius: 1em;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.middle-card{
+  margin: 0 1em 0 1em;
+}
+
+.card-desc {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+.card-desc p {
+  color: var(--primary-color);
+}
+
+.card-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.card-link:hover {
+  color: var(--third-color);
+  background: var(--forth-color);
+  border-radius: 0.5em;
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+.card:hover {
+  transform: translateY(-10%);
+}
+
+.card1-img {
+  width: 80%;
+  height: auto;
+}
+
+.link-container {
+  margin-top: 0.8em;
+  margin-bottom: 1em;
+}
+
+.icon {
+  fill: var(--primary-color);
+  width: 2em;
+  height: auto;
+}
+
+.desc-with-icon {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: hsl(187, 45%, 72%,0.9); 
+  animation: 0.3s zoom;
+}
+
+.modal p {
+  color: white;
+}
+
+@keyframes modal-fade {
+  from {
+    background-color: hsl(187, 45%, 72%,0);
+  }
+  to {
+    background-color: hsl(187, 45%, 72%,0.9);
+  }
+}
+
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.modal-content {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoom-out{
+  form{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(0);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: var(--secondary-color);
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
